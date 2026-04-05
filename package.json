@@ -1,5 +1,5 @@
 {
-  "name": "ai-readme-gen",
+  "name": "readme-ai-gen",
   "version": "1.0.0",
   "description": "CLI tool that scans a project and generates a professional README.md using AI or smart heuristics",
   "type": "module",

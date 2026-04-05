@@ -1,0 +1,83 @@
+# Contributing to {{name}}
+
+Thank you for taking the time to contribute! 🎉
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Development Setup](#development-setup)
+- [Coding Standards](#coding-standards)
+- [Testing](#testing)
+- [Submitting Changes](#submitting-changes)
+- [Code of Conduct](#code-of-conduct)
+
+## Getting Started
+
+1. Fork the repository on GitHub
+2. Clone your fork locally:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/{{name}}.git
+   cd {{name}}
+   ```
+3. Install dependencies:
+   ```bash
+   {{installCommand}}
+   ```
+
+## Development Setup
+
+```bash
+{{installCommand}}
+{{#if devCommand}}
+# Start development server
+{{devCommand}}
+{{/if}}
+{{#if buildCommand}}
+# Build the project
+{{buildCommand}}
+{{/if}}
+```
+
+## Coding Standards
+
+- Follow the existing code style and conventions
+- Use meaningful variable and function names
+- Keep functions small and focused
+- Add comments for complex logic
+- No console.log left in committed code
+
+## Testing
+
+{{#if testCommand}}
+```bash
+{{testCommand}}
+```
+
+All new features and bug fixes must include tests.
+{{else}}
+Run the test suite before submitting:
+```bash
+# Add your test command here
+```
+{{/if}}
+
+## Submitting Changes
+
+1. Create a feature branch:
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+2. Make your changes and commit using [Conventional Commits](https://www.conventionalcommits.org/):
+   ```
+   feat: add new feature
+   fix: resolve issue with X
+   docs: update README
+   ```
+3. Push your branch and open a Pull Request
+4. Ensure CI checks pass
+5. Request a review
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+Be respectful, inclusive, and constructive in all interactions.

@@ -1,0 +1,113 @@
+# {{name}}
+
+{{#if (hasItems badges)}}
+{{#each badges}}[![{{label}}]({{imageUrl}})]({{#if url}}{{url}}{{else}}#{{/if}}) {{/each}}
+{{/if}}
+
+> {{description}}
+
+{{#unless (eq style "minimal")}}
+## Features
+
+- Built with **{{language}}**{{#unless (eq framework "None")}} and **{{framework}}**{{/unless}}
+{{#if isCli}}- Command-line interface{{/if}}
+{{#if isLibrary}}- Reusable library / SDK{{/if}}
+{{#if isApi}}- REST API server{{/if}}
+{{#if isFullstack}}- Full-stack web application{{/if}}
+{{#if hasTests}}- Test suite included{{/if}}
+{{#if hasDocker}}- Docker support{{/if}}
+{{#if hasMakefile}}- Makefile automation{{/if}}
+{{#if (hasItems keywords)}}
+- Topics: {{join keywords ", "}}
+{{/if}}
+{{/unless}}
+
+## Installation
+
+{{#if installCommand}}
+```bash
+{{installCommand}}
+```
+{{/if}}
+
+{{#if (hasItems usageExamples)}}
+## Usage
+
+{{#each usageExamples}}
+```bash
+{{{this}}}
+```
+
+{{/each}}
+{{else}}
+## Usage
+
+```{{#if (eq language "TypeScript")}}typescript{{else if (eq language "JavaScript")}}javascript{{else if (eq language "Python")}}python{{else if (eq language "Go")}}go{{else if (eq language "Rust")}}rust{{else}}bash{{/if}}
+// TODO: Add usage examples
+```
+{{/if}}
+
+{{#if (and (eq style "detailed") (hasItems exports))}}
+## API
+
+{{#each exports}}
+### `{{name}}`
+
+**Kind:** `{{kind}}`
+
+{{#if signature}}
+```typescript
+{{signature}}
+```
+{{/if}}
+
+---
+
+{{/each}}
+{{/if}}
+
+{{#unless (eq style "minimal")}}
+## Development
+
+```bash
+# Install dependencies
+{{installCommand}}
+
+{{#if devCommand}}# Start dev server
+{{devCommand}}
+
+{{/if}}
+{{#if buildCommand}}# Build
+{{buildCommand}}
+
+{{/if}}
+{{#if testCommand}}# Run tests
+{{testCommand}}
+{{/if}}
+```
+{{/unless}}
+
+{{#if (hasItems envVars)}}
+## Configuration
+
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+{{#each envVars}}| `{{name}}` | {{#if required}}Yes{{else}}No{{/if}} | {{#if defaultValue}}`{{defaultValue}}`{{else}}—{{/if}} | {{#if description}}{{description}}{{else}}—{{/if}} |
+{{/each}}
+{{/if}}
+
+{{#unless (eq style "minimal")}}
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m 'feat: add my feature'`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Open a Pull Request
+{{/unless}}
+
+## License
+
+{{license}} © {{year}} {{#if author}}{{author}}{{else}}Contributors{{/if}}
