@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"git init && git add -A && git commit -m \\\"feat: initial release — AI-powered README generator CLI\\\" 2>&1 | tail -5\",\"description\":\"Init git repo for ai-readme-gen\"}",
+  "error": "Exit code 128\nИнициализирован пустой репозиторий Git в /mnt/ntfs/Docker/sandbox/ai-readme-gen/.git/\nfatal: detected dubious ownership in repository at '/mnt/ntfs/Docker/sandbox/ai-readme-gen'\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory /mnt/ntfs/Docker/sandbox/ai-readme-gen",
+  "timestamp": "2026-04-05T21:24:25.005Z",
+  "retry_count": 1
+}
